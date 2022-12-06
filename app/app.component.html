@@ -1,0 +1,20 @@
+<div class="container">
+  <input
+    type="radio"
+    [value]="true"
+    [ngModel]="flag$ | async"
+    (ngModelChange)="setFlag($event)"
+  />
+  Show store 1
+  <input
+    type="radio"
+    [value]="false"
+    [ngModel]="flag$ | async"
+    (ngModelChange)="setFlag($event)"
+  />
+  Show store 2
+</div>
+<ng-container *ngIf="((flag$ | async) ? store1$ : store2$) | async as store">
+  <div>{{ store?.prop1 }}</div>
+  <div>{{ store?.prop2 }}</div>
+</ng-container>

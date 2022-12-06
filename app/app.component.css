@@ -1,0 +1,13 @@
+div.container {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+div:not(.container) {
+  margin-left: 12px;
+}
+
+input:not(:first-child) {
+  margin-left: 20px;
+}
